@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AIPort - AI Portfolio Reviewer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI<span>Port</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#results">Results</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="badge">
+                ✦ AI POWERED PORTFOLIO ANALYSIS
+            </p>
+
+            <h1>
+                Make Your Portfolio
+                <span>Better With AI</span>
+            </h1>
+
+            <p class="description">
+                Analyze your portfolio website and discover
+                improvements for design, content, SEO,
+                accessibility and user experience.
+            </p>
+
+            <div class="url-box">
+
+                <input
+                    type="url"
+                    id="portfolioURL"
+                    placeholder="https://yourportfolio.com"
+                >
+
+                <button onclick="analyzePortfolio()">
+                    Analyze
+                </button>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+
+        <h2>What AIPort Reviews</h2>
+
+        <div class="feature-container">
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>UI / UX</h3>
+                <p>
+                    Analyze your design and user experience.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📱</div>
+                <h3>Responsive</h3>
+                <p>
+                    Check your website across different devices.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔍</div>
+                <h3>SEO</h3>
+                <p>
+                    Find important SEO improvements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">♿</div>
+                <h3>Accessibility</h3>
+                <p>
+                    Discover accessibility problems.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTS -->
+    <section class="results" id="results">
+
+        <div class="results-container">
+
+            <h2>Portfolio Review</h2>
+
+            <p class="review-url" id="reviewURL">
+                No portfolio analyzed yet.
+            </p>
+
+
+            <!-- OVERALL SCORE -->
+            <div class="overall-card">
+
+                <div class="score-circle">
+                    <span id="overallScore">--</span>
+                    <small>/100</small>
+                </div>
+
+                <div>
+                    <h3>Overall Score</h3>
+
+                    <p>
+                        Your portfolio quality score
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- SCORE CARDS -->
+            <div class="score-grid">
+
+                <div class="score-card">
+                    <span>🎨</span>
+                    <h3>UI / UX</h3>
+                    <strong id="uiScore">--</strong>
+                </div>
+
+                <div class="score-card">
+                    <span>📱</span>
+                    <h3>Responsive</h3>
+                    <strong id="responsiveScore">--</strong>
+                </div>
+
+                <div class="score-card">
+                    <span>🔍</span>
+                    <h3>SEO</h3>
+                    <strong id="seoScore">--</strong>
+                </div>
+
+                <div class="score-card">
+                    <span>♿</span>
+                    <h3>Accessibility</h3>
+                    <strong id="accessibilityScore">--</strong>
+                </div>
+
+                <div class="score-card">
+                    <span>✍️</span>
+                    <h3>Content</h3>
+                    <strong id="contentScore">--</strong>
+                </div>
+
+                <div class="score-card">
+                    <span>⚡</span>
+                    <h3>Performance</h3>
+                    <strong id="performanceScore">--</strong>
+                </div>
+
+            </div>
+
+
+            <!-- AI SUGGESTIONS -->
+            <div class="suggestions">
+
+                <h2>💡 AI Suggestions</h2>
+
+                <div id="suggestionList">
+
+                    <p>
+                        Analyze a portfolio to receive
+                        personalized suggestions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2>About AIPort</h2>
+
+        <p>
+            AIPort is an AI-powered portfolio reviewer
+            designed to help students, developers and
+            professionals create better portfolio websites.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 AIPort. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
